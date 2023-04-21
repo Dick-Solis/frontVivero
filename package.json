@@ -10,8 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@trendyol-js/react-carousel": "^3.0.2",
+    "framer-motion": "^10.12.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
+    "styled-components": "^5.3.9",
+    "swiper": "^9.2.3",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
