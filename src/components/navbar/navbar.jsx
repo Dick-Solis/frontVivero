@@ -178,7 +178,7 @@ export function ComponentNavbar() {
               </MenuItemLink>
             </MenuItem>
             <MenuItem>
-              <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
+              <MenuItemLink to="/ubicanos" onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div>
                   <FaBriefcase />
                   UBICANOS
@@ -186,7 +186,7 @@ export function ComponentNavbar() {
               </MenuItemLink>
             </MenuItem>
             <MenuItem>
-              <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
+              <MenuItemLink to="/contactanos" onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div>
                   <FaGlasses />
                   CONTÁCTANOS
