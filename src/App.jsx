@@ -6,7 +6,7 @@ import { NavigationsRouters } from "./routes/routes"
   const Container = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 30px;
   `;
 //#endregion
 

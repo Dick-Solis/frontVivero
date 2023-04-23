@@ -6,7 +6,6 @@ import imgHojas from '../../assets/hojas.jpg';
 import planta from '../../assets/planta.jpg';
 import viveros from '../../assets/viveros.jpg';
 import representacion from '../../assets/representacion.jpg';
-import "./carrusel.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -16,7 +15,6 @@ import "swiper/css/autoplay";
 //#region
   const StyledImg = styled.img`
     width: 100vw;
-    height: 900px;
   `;
 //#endregion
 
@@ -39,10 +37,10 @@ return (
 <div className="container--carrusel">
   <Swiper
     modules={[Navigation,Pagination,Scrollbar,Autoplay,]}
-    spaceBetween={50}
     slidesPerView={1}
     autoplay={{ delay: 3000 }}
     navigation={{ Navigation }}
+    style={{maxHeight: '500px'}}
   >
     <SwiperSlide>
       <Carousel1 tamaños={widthScreen}/>

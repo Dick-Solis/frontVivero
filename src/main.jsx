@@ -4,6 +4,7 @@ import App from './App.jsx'
 import { Global } from '@emotion/react';
 import { global, reset } from './styles/global.jsx';
 import { BrowserRouter } from 'react-router-dom';
+import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
