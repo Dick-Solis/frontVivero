@@ -1,12 +1,21 @@
-import { ComponentCarrusel } from "./components/carrusel/carrusel"
-import { ComponentNavbar } from "./components/navbar"
+import { ComponentNavbar } from "./components/navbar/navbar"
+import styled from "styled-components"
+import { NavigationsRouters } from "./routes/routes"
+
+//#region Styled
+  const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  `;
+//#endregion
 
 function App() {
   return (
-    <>
-    <ComponentNavbar/>
-    <ComponentCarrusel/>
-    </>
+    <Container>
+      <ComponentNavbar/>
+      <NavigationsRouters/>
+    </Container>
   )
 }
 

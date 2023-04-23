@@ -3,6 +3,9 @@ import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, Autoplay } from "swiper";
 import imgHojas from '../../assets/hojas.jpg';
+import planta from '../../assets/planta.jpg';
+import viveros from '../../assets/viveros.jpg';
+import representacion from '../../assets/representacion.jpg';
 import "./carrusel.css";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -13,6 +16,7 @@ import "swiper/css/autoplay";
 //#region
   const StyledImg = styled.img`
     width: 100vw;
+    height: 900px;
   `;
 //#endregion
 
@@ -41,7 +45,11 @@ return (
     navigation={{ Navigation }}
   >
     <SwiperSlide>
-      <Carousel3 tamaños={widthScreen}/>
+      <Carousel1 tamaños={widthScreen}/>
+    </SwiperSlide>
+
+    <SwiperSlide>
+      <Carousel2 tamaños={widthScreen}/>
     </SwiperSlide>
 
     <SwiperSlide>
@@ -49,21 +57,38 @@ return (
     </SwiperSlide>
 
     <SwiperSlide>
-      <Carousel3 tamaños={widthScreen}/>
-    </SwiperSlide>
-
-    <SwiperSlide>
-      <Carousel3 tamaños={widthScreen}/>
+      <Carousel4 tamaños={widthScreen}/>
     </SwiperSlide>
   </Swiper>
 </div>
 );
 }
 
+function Carousel1(props) {
+  return (
+    <>
+      <StyledImg src={planta}/>
+    </>
+  );
+}
+function Carousel2(props) {
+  return (
+    <>
+      <StyledImg src={representacion}/>
+    </>
+  );
+}
 function Carousel3(props) {
   return (
     <>
       <StyledImg src={imgHojas}/>
+    </>
+  );
+}
+function Carousel4(props) {
+  return (
+    <>
+      <StyledImg src={viveros}/>
     </>
   );
 }
