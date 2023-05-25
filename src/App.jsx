@@ -1,6 +1,6 @@
-import { ComponentNavbar } from "./components/navbar/navbar"
-import styled from "styled-components"
-import { NavigationsRouters } from "./routes/routes"
+import styled from "styled-components";
+import { ComponentNavbar } from "./components/navbar/navbar";
+
 
 //#region Styled
   const Container = styled.div`
@@ -14,7 +14,6 @@ function App() {
   return (
     <Container>
       <ComponentNavbar/>
-      <NavigationsRouters/>
     </Container>
   )
 }

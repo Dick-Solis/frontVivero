@@ -6,7 +6,7 @@ import {
   FaTimes,
   FaHome,
   FaUserAlt,
-  FaBriefcase,
+  FaMapMarkerAlt,
   FaGlasses,
 } from "react-icons/fa";
 import { IconContext } from "react-icons";
@@ -17,8 +17,9 @@ import { NavLink } from 'react-router-dom';
 const Container = styled.header`
   width: 100%;
   height: 70px;
-  background-color: #03899e;
+  background-color: #F9FBFE;
   padding: 0 20px;
+  
 `;
 
 const Wrapper = styled.nav`
@@ -37,16 +38,16 @@ const LogoContainer = styled.div`
   font-size: 1.2rem;
   p {
     &:nth-child(2) {
-      color: #fff;
+      /* color: #fff; */
     }
     &:nth-child(3) {
       font-size: 1.5rem;
       font-weight: 500;
-      color: #ffffff;
+      /* color: #ffffff; */
     }
   }
   svg {
-    fill: #ffffff;
+    /* fill: #ffffff; */
     margin-right: 0.5rem;
   }
 `;
@@ -57,8 +58,10 @@ const Menu = styled.ul`
   gap: 20px;
   justify-content: space-between;
   list-style: none;
+  gap: 0 60px;
   @media (max-width: 960px) {
-    background-color: #0d586f;
+    /* background-color: #0d586f; */
+    background-color: #e7f0ff;
     position: absolute;
     z-index: 10;
     top: 70px;
@@ -90,13 +93,14 @@ const MenuItemLink = styled(NavLink)`
   font-weight:bold;
   text-decoration: none;
   height: 100%;
-  color: #ffffff;
   font-size: 1rem;
   cursor: pointer;
+  color: black;
   transition: 0.3s ease-in-out;
+  font-family: "Caveat";
   &:hover {
-    color: #006381;
-    text-decoration:3px underline;
+    color: #6FAE99;
+    text-decoration: none;
     div {
       svg {
         fill: #23394d;
@@ -113,7 +117,7 @@ div {
   font-weight:bold;
   svg {
     display: none;
-    fill: #056e97;
+    fill: #000000;
     margin-right: 0.5rem;
   }
 }
@@ -137,7 +141,7 @@ const MobileIcon = styled.div`
     align-items: center;
     cursor: pointer;
     svg {
-      fill: #0b4a78;
+      fill: black;
       margin-right: 0.5rem;
     }
 }
@@ -165,7 +169,7 @@ export function ComponentNavbar() {
               <MenuItemLink to="/" onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div>
                   <FaHome />
-                  INICIO
+                  HOME
                 </div>
               </MenuItemLink>
             </MenuItem>
@@ -180,7 +184,7 @@ export function ComponentNavbar() {
             <MenuItem>
               <MenuItemLink to="/ubicanos" onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div>
-                  <FaBriefcase />
+                  <FaMapMarkerAlt />
                   UBICANOS
                 </div>
               </MenuItemLink>
