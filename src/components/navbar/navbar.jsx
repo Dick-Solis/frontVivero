@@ -17,9 +17,10 @@ import { NavLink } from 'react-router-dom';
 const Container = styled.header`
   width: 100%;
   height: 70px;
-  background-color: #F9FBFE;
+  background: rgba(255, 255, 255, 0.9);
   padding: 0 20px;
-  
+  z-index: 1000;
+  position: fixed;
 `;
 
 const Wrapper = styled.nav`
@@ -61,7 +62,7 @@ const Menu = styled.ul`
   gap: 0 60px;
   @media (max-width: 960px) {
     /* background-color: #0d586f; */
-    background-color: #e7f0ff;
+    background: rgba(255, 255, 255, 0.9);
     position: absolute;
     z-index: 10;
     top: 70px;

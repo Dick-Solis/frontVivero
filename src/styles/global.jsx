@@ -40,7 +40,7 @@ export const reset = css`
   body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
-    line-height: 1.5;
+    /* line-height: 1.5; */
   }
   /* A elements that don't have a class get default styles */
   a:not([class]) {
@@ -78,7 +78,7 @@ export const reset = css`
 export const global = css`
   body {
     font-size: 1rem;
-    line-height: 1.5rem;
+    /* line-height: 1.5rem; */
     font-family: ${fonts.primary};
     color: ${colors.gray.dark};
     font-weight: 400;

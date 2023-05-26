@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { ComponentNavbar } from "./components/navbar/navbar";
+import { NavigationsRouters } from "./routes/routes";
 
 
 //#region Styled
@@ -14,6 +15,7 @@ function App() {
   return (
     <Container>
       <ComponentNavbar/>
+      <NavigationsRouters/>
     </Container>
   )
 }
