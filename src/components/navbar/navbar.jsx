@@ -183,10 +183,10 @@ export function ComponentNavbar() {
               </MenuItemLink>
             </MenuItem>
             <MenuItem>
-              <MenuItemLink to="/ubicanos" onClick={() => setShowMobileMenu(!showMobileMenu)}>
+              <MenuItemLink to="/servicios" onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div>
                   <FaMapMarkerAlt />
-                  UBICANOS
+                  SERVICIOS
                 </div>
               </MenuItemLink>
             </MenuItem>
