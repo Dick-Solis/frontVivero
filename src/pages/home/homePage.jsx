@@ -8,6 +8,7 @@ import arbol from  "../../assets/Arbol.jpg";
 import {RiLockPasswordFill,RiPlantFill} from "react-icons/ri"
 import {AiFillTag} from "react-icons/ai";
 import { CardPlant } from "../../components/card/cardFlor";
+import { Footer } from "../../components/footer/footer";
 
 
 //#region
@@ -270,6 +271,7 @@ export function HomePage() {
         </ContentCards>
       </ContentProducts>
 
+      <Footer/>
     </>
   )
 }
