@@ -95,7 +95,7 @@ export function Footer() {
         </StyledContentFooter>
       </StyledContentAllDescription>
       <SectionFooter>
-        <h3>2023 © todos los derechos reservados Plantasana</h3>
+        <h3>2023 © todos los derechos reservados PLANTSANA</h3>
       </SectionFooter>
     </StyledContent>
   )

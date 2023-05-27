@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import cargandoPlanta from "../../assets/cargandoPlanta.jpg";
+import cargandoPlanta from "../../assets/p-01.jpg";
 import marcoFlores from "../../assets/marcoFlores.jpg";
 import arregloRosas from "../../assets/arregloRosas.jpg";
 import suculentas from "../../assets/suculentas.jpg";

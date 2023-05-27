@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import { NavLink } from 'react-router-dom';
-
+import logoVivero from '../../assets/MUNDO-VERDE-01.png'
 
 //#region Styled Component
 const Container = styled.header`
@@ -148,6 +148,11 @@ const MobileIcon = styled.div`
 }
 `;
 
+  const StyledLogo = styled.img`
+    width: 235px;
+    height: 80px;
+  `;
+
 //#endregion
 
 export function ComponentNavbar() {
@@ -157,8 +162,7 @@ export function ComponentNavbar() {
       <Wrapper>
         <IconContext.Provider value={{ style: { fontSize: "2em" } }}>
           <LogoContainer>
-            <FaBattleNet />
-            <p>Grupo Rino</p>
+            <StyledLogo src={logoVivero} alt="" />
           </LogoContainer>
 
           <MobileIcon onClick={() => setShowMobileMenu(!showMobileMenu)}>
