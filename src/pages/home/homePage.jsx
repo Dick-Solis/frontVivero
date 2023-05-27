@@ -4,9 +4,9 @@ import marcoFlores from "../../assets/marcoFlores.jpg";
 import arregloRosas from "../../assets/arregloRosas.jpg";
 import suculentas from "../../assets/suculentas.jpg";
 import plantaJardin from "../../assets/plantaJardin.jpg";
-import arbol from  "../../assets/Arbol.jpg";
-import {RiLockPasswordFill,RiPlantFill} from "react-icons/ri"
-import {AiFillTag} from "react-icons/ai";
+import arbol from "../../assets/Arbol.jpg";
+import { RiLockPasswordFill, RiPlantFill } from "react-icons/ri"
+import { AiFillTag } from "react-icons/ai";
 import { CardPlant } from "../../components/card/cardFlor";
 import { Footer } from "../../components/footer/footer";
 
@@ -43,6 +43,7 @@ const StyledContentHeader = styled.div`
 
 const TitleContent = styled.h1`
     font-size: 70px;
+    text-align: center;
     color: white;
   `;
 
@@ -65,7 +66,7 @@ const ButtonLink = styled.a`
     }
   `;
 
-  const StyledFlores = styled.section`
+const StyledFlores = styled.section`
     background-image: url(${marcoFlores});
     background-repeat: no-repeat;
     background-size: cover;
@@ -81,7 +82,7 @@ const ButtonLink = styled.a`
     margin-bottom: 20px;
   `;
 
-  const ContentStyledCards = styled.div`
+const ContentStyledCards = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
@@ -90,13 +91,13 @@ const ButtonLink = styled.a`
     gap: 15px;
   `;
 
-  const CardsContentFisrt = styled.div`
+const CardsContentFisrt = styled.div`
     display: flex;
     flex-direction: column;
     gap: 15px;
   `;
 
-  const StyledCardUno = styled.article`
+const StyledCardUno = styled.article`
     background-image: url(${arregloRosas});
     background-repeat: no-repeat;
     background-size: cover;
@@ -109,7 +110,7 @@ const ButtonLink = styled.a`
     min-height: 300px;
   `;
 
-  const StyledCardDos = styled.article`
+const StyledCardDos = styled.article`
     background-image: url(${suculentas});
     background-repeat: no-repeat;
     background-size: cover;
@@ -122,7 +123,7 @@ const ButtonLink = styled.a`
     min-height: 300px;
   `;
 
-  const StyledCardTres = styled.article`
+const StyledCardTres = styled.article`
     background-image: url(${plantaJardin});
     background-repeat: no-repeat;
     background-size: cover;
@@ -135,7 +136,7 @@ const ButtonLink = styled.a`
     height: 615px;
   `;
 
-  const StyledCardCuatro = styled.article`
+const StyledCardCuatro = styled.article`
     background-image: url(${arbol});
     background-repeat: no-repeat;
     background-size: cover;
@@ -149,17 +150,17 @@ const ButtonLink = styled.a`
   `;
 
 
-  const TitleCard = styled.h2`
+const TitleCard = styled.h2`
     font-size: 60px;
     color: white;
   `;
-  
-  const TextCard = styled.p`
+
+const TextCard = styled.p`
     font-size: 25px;
     color: white;
   `;
 
-  const ContentStyledIcons = styled.div`
+const ContentStyledIcons = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
@@ -169,14 +170,14 @@ const ButtonLink = styled.a`
     gap: 70px;
   `;
 
-  const ContentIcon = styled.div`
+const ContentIcon = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   `;
 
-  const ContentProducts = styled.section`
+const ContentProducts = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -186,15 +187,15 @@ const ButtonLink = styled.a`
     margin: 50px;
   `;
 
-  const TitleContentProducts = styled.h2`
+const TitleContentProducts = styled.h2`
     font-size: 50px;
   `;
 
-  const DescriptionContentProducts = styled.span`
+const DescriptionContentProducts = styled.span`
     font-size: 25px;
   `;
 
-  const ContentCards = styled.div`
+const ContentCards = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
@@ -204,18 +205,53 @@ const ButtonLink = styled.a`
       flex-wrap: wrap;
     }
   `;
+
+  const ContentNososotros = styled.section`
+    width: 100%;
+    background-color: #bab6b6;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    padding: 25px;
+    @media (max-width: 1024px){
+      flex-wrap: wrap;
+    }
+  `;
+
+  const TitleDescription = styled.h2`
+    width: 100%;
+    text-align: center;
+  `;
+
+  const ContentCardsDescription = styled.div`
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: start;
+    flex-direction: column;
+    text-align: justify;
+    gap: 7px;
+  `;
 //#endregion
 
 export function HomePage() {
   const style = {
     fontSize: "40px",
   }
+
+  function handleClick() {
+    const elementoDestino = document.getElementById('destinoNosotros');
+    elementoDestino.scrollIntoView({ behavior: 'smooth' });
+  }
+
+
   return (
     <>
       <StyledHeader>
         <StyledContentHeader>
-          <TitleContent>Vivero</TitleContent>
-          <ButtonLink>Más</ButtonLink>
+          <TitleContent>Vivero Mundo Verde</TitleContent>
+          <ButtonLink onClick={handleClick}>Más</ButtonLink>
         </StyledContentHeader>
       </StyledHeader>
 
@@ -244,34 +280,53 @@ export function HomePage() {
       </StyledFlores >
 
       <ContentStyledIcons>
-          <ContentIcon>
-            <RiLockPasswordFill style={style}/>
-            <h4>Seguridad Garantizada</h4>
-          </ContentIcon>
+        <ContentIcon>
+          <RiLockPasswordFill style={style} />
+          <h4>Seguridad Garantizada</h4>
+        </ContentIcon>
 
-          <ContentIcon>
-            <AiFillTag style={style}/>
-            <h4>Calidad en Nuestros Productos</h4>
-          </ContentIcon>
+        <ContentIcon>
+          <AiFillTag style={style} />
+          <h4>Calidad en Nuestros Productos</h4>
+        </ContentIcon>
 
-          <ContentIcon>
-            <RiPlantFill style={style}/>
-            <h4>Variedad de Plantas</h4>
-          </ContentIcon>
+        <ContentIcon>
+          <RiPlantFill style={style} />
+          <h4>Variedad de Plantas</h4>
+        </ContentIcon>
       </ContentStyledIcons>
+
+      <ContentNososotros id="destinoNosotros">
+        <ContentCardsDescription>
+          <TitleDescription>Vivero Mundo Verde</TitleDescription>
+          <p>Es una empresa especializada en la creación de plantas ornamentales y productos afines. Ademas brindan servicios paisajistas profesionales, diseño, habilitación y mantenimiento de jardínes también ofrecen flores y follajes de corte en el mercado Nacional e Internacional.</p>
+        </ContentCardsDescription>
+        <ContentCardsDescription>
+          <TitleDescription>Servicios profesionales en el vivero</TitleDescription>
+          <p>✅ Asesoría para el cuidado de sus plantas considerando los factores ambientales (agua, factores edáficos, radiación solar, viento, etc).</p>
+          <p>✅ Recomendaciones para una fertilización adecuada.</p>
+          <p>✅ Análisis y diagnóstico de problemas fitosanitarios.</p>
+          <p>✅ Recomendaciones condiderando los efectos sobre el medio ambiente.</p>
+          <p>✅ Cambio de substrato de sus plantas en maceta</p>
+        </ContentCardsDescription>
+        <ContentCardsDescription>
+          <TitleDescription>Historia</TitleDescription>
+          <p>Somos una empresa 100% peruana, con 28 años de experiencia y liderazgo en la propagación de plantas frutales con los más altos estándares de calidad genética.</p>
+        </ContentCardsDescription>
+      </ContentNososotros>
 
       <ContentProducts>
         <TitleContentProducts>Principales Productos</TitleContentProducts>
         <DescriptionContentProducts>Calidad Garantizada</DescriptionContentProducts>
         <ContentCards>
-          <CardPlant/>
-          <CardPlant/>
-          <CardPlant/>
-          <CardPlant/>
+          <CardPlant />
+          <CardPlant />
+          <CardPlant />
+          <CardPlant />
         </ContentCards>
       </ContentProducts>
 
-      <Footer/>
+      <Footer />
     </>
   )
 }

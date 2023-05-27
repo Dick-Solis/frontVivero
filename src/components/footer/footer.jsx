@@ -1,15 +1,21 @@
 import styled from "@emotion/styled";
-import {GiPlantWatering,GiPlantSeed} from "react-icons/gi";
 import {RiPlantFill} from "react-icons/ri"
 import {FaFacebook} from "react-icons/fa";
 import {AiFillInstagram,AiOutlineTwitter} from "react-icons/ai";
+import imageFooter from "../../assets/footerbg.jpg"
+import logoCompany from "../../assets/MUNDO-VERDE-01.png"
+
 //#region
   const StyledContent = styled.footer`
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction:column;
-    background-color: #CCCCCC;
+    background-image: url(${imageFooter});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
   `;
 
   const StyledContentFooter = styled.article`
@@ -28,14 +34,21 @@ import {AiFillInstagram,AiOutlineTwitter} from "react-icons/ai";
     display: flex;
     flex-direction: column;
     text-align: justify;
+    padding: 15px;
+    border-left:  4px solid #7D9B0E;
+    @media (max-width:1024px){
+      border-top: 4px solid #7D9B0E;
+      border-left: none;
+    }
   `;
 
   const StyledContentAllDescription = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 40px;
     @media (max-width:1024px){
+      padding: 100px 10px;
       flex-wrap: wrap;
     }
   `;
@@ -54,6 +67,13 @@ import {AiFillInstagram,AiOutlineTwitter} from "react-icons/ai";
     color: white;
     text-align: center;
   `;
+
+  const StyledText = styled.p`
+    min-width: 100%;
+    width: 150px;
+    font-size: 15px;
+    font-weight: bold;
+  `;
 //#endregion
 
 export function Footer() {
@@ -70,19 +90,24 @@ export function Footer() {
       <StyledContentAllDescription>
         <StyledContentFooter>
           <StyledContentDescription>
-            <RiPlantFill style={styleIconsLogos}/>
-            <StyleTitle>Vivero Vivero</StyleTitle>
-            <p>Content Content</p>
+            <img src={logoCompany}/>
+            {/* <p>Somos una empresa 100% peruana, con 28 años de experiencia y liderazgo en la propagación de plantas frutales con los más altos estándares de calidad genética.</p> */}
           </StyledContentDescription>
           <StyledContentDescription>
-            <StyleTitle>Content Description</StyleTitle>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem libero magni explicabo cupiditate, aliquid rerum, perferendis nulla minima doloremque expedita laboriosam veniam ipsam, eos ut alias corrupti pariatur sed itaque.</p>
+            <StyleTitle>Horario de Atención</StyleTitle>
+            <StyledText>LUNES A VIERNES:</StyledText>
+            <StyledText>8:00am a 6:00pm</StyledText>
+            <StyledText>Sábados: 8:00am a 1:00pm</StyledText>
+            <StyledText>Domingos: Cerrado</StyledText>
+            <StyledText>MÁS INFORMACIÓN A:</StyledText>
+            <StyledText>asesoria@planta-de-la-vida.com</StyledText>
           </StyledContentDescription>
         </StyledContentFooter>
         <StyledContentFooter>
           <StyledContentDescription>
-            <StyleTitle>Content Description</StyleTitle>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem libero magni explicabo cupiditate, aliquid rerum, perferendis nulla minima doloremque expedita laboriosam veniam ipsam, eos ut alias corrupti pariatur sed itaque.</p>
+            <StyleTitle>Ubicación</StyleTitle>
+            <p>Huánuco - Perú</p>
+            <p>Jr. Contitución # 461</p>
           </StyledContentDescription>
           <StyledContentDescription>
             <StyleTitle>Siguenos</StyleTitle>
