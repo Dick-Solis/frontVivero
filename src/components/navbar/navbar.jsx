@@ -16,9 +16,9 @@ import logoVivero from '../../assets/MUNDO-VERDE-01.png'
 //#region Styled Component
 const Container = styled.header`
   width: 100%;
-  height: 70px;
+  /* height: 70px; */
   background: rgba(255, 255, 255, 0.9);
-  padding: 0 20px;
+  padding: 5px;
   z-index: 1000;
   position: fixed;
 `;
@@ -28,8 +28,10 @@ const Wrapper = styled.nav`
   max-width: 1300px;
   height: 100%;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  align-items: center;
   justify-content: space-between;
+  padding: 0 20px;
 `;
 
 const LogoContainer = styled.div`
@@ -65,7 +67,7 @@ const Menu = styled.ul`
     background: rgba(255, 255, 255, 0.9);
     position: absolute;
     z-index: 10;
-    top: 70px;
+    top: 90px;
     left: ${({ open }) => (open ? "0" : "-100%")}; //Import
     width: 100%;
     height: 90vh;
