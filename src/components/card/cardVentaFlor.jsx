@@ -4,7 +4,7 @@ import florVenta from "../../assets/flor4.webp";
 //#region
   const Card = styled.div`
     width: 220px;
-    height: 320px;
+    /* height: 320px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,17 +12,18 @@ import florVenta from "../../assets/flor4.webp";
     flex-direction: column;
     border-radius: 15px;
     border: 2px solid #0a907a;
-    padding: 5px 25px;
+    padding: 5px;
   `;
 
   const StyledImage = styled.img`
-    width: 150px;
-    height: 180px;
+    /* width: 300px;
+    height: 180px; */
     border-radius: 10px;
   `;
 
-  const StyledTitle = styled.h3`
+  const StyledTitle = styled.p`
     text-align: center;
+    font-weight: bold;
     font-family: "Archivo Narrow";
   `;
 
@@ -50,7 +51,7 @@ export function CardVentaFlor(props){
   const {element} = props;
   return(
     <Card>
-      <img src={`data:image/jpeg;base64,${element.foto}`} alt="flor" />
+      <StyledImage src={element.foto} alt="flor" />
       <StyledTitle>{element.nombre_comercial}</StyledTitle>
       <StyledPrice>S/ {element.precio}</StyledPrice>
       <StyledButton>COMPRAR</StyledButton>

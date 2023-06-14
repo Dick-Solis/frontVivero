@@ -127,8 +127,9 @@ const StyledButtonSearch = styled.button`
 
   const ContainerPlantas = styled.div`
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
     gap: 20px;
   `;
 //#endregion
@@ -163,8 +164,8 @@ export function PlantsPage() {
   }
 
   function clickSearch(){
-    const searchPlant = handleDataPlants.filter(item => item.nombre_comercial?.toLowerCase() === valueSearch.toLowerCase());
-    // setModalOpen(true);
+    const searchPlant = handleDataPlants.filter(item => item.nombre_comercial?.toLowerCase().includes(valueSearch.toLowerCase()));
+    setIdTipo("");
     setElementSearch(searchPlant);
   }
 
@@ -176,7 +177,7 @@ export function PlantsPage() {
     <ContentPage>
       <Modal isOpen={modalOpen} onClose={closeModal}>
         {
-          elementSearch.slice(0,14).map((element)=>
+          elementSearch.map((element)=>
           (<CardVentaFlor key={element.id_planta} element={element}/>)
         )
         }
@@ -235,7 +236,7 @@ export function PlantsPage() {
         <ContainerPlantas>
           {idTipo ? dataPlants.map((element)=>
             (<CardVentaFlor key={element.id_planta} element={element}/>)
-          ): elementSearch.length > 0 ? elementSearch.slice(0,14).map((element)=>
+          ): elementSearch.length > 0 ? elementSearch.map((element)=>
             (<CardVentaFlor key={element.id_planta} element={element}/>)
            ): handleDataPlants.slice(0,14).map((element)=>
             (<CardVentaFlor key={element.id_planta} element={element}/>)
