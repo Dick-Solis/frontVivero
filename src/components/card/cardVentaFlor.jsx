@@ -3,6 +3,8 @@ import florVenta from "../../assets/flor4.webp";
 
 //#region
   const Card = styled.div`
+    width: 220px;
+    height: 320px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,6 +22,7 @@ import florVenta from "../../assets/flor4.webp";
   `;
 
   const StyledTitle = styled.h3`
+    text-align: center;
     font-family: "Archivo Narrow";
   `;
 
@@ -43,12 +46,13 @@ import florVenta from "../../assets/flor4.webp";
   `; 
 //#endregion
 
-export function CardVentaFlor(){
+export function CardVentaFlor(props){
+  const {element} = props;
   return(
     <Card>
-      <StyledImage src={florVenta} alt="flor" />
-      <StyledTitle>Name Plant</StyledTitle>
-      <StyledPrice>S/ 57.00</StyledPrice>
+      <img src={`data:image/jpeg;base64,${element.foto}`} alt="flor" />
+      <StyledTitle>{element.nombre_comercial}</StyledTitle>
+      <StyledPrice>S/ {element.precio}</StyledPrice>
       <StyledButton>COMPRAR</StyledButton>
     </Card>
   )

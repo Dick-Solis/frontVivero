@@ -1,0 +1,1 @@
+export const BASE_URI = "https://vivero-api.planta-de-la-vida.com/api";
