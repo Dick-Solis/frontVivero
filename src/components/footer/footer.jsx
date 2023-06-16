@@ -124,7 +124,7 @@ export function Footer() {
           <StyledContentDescription>
             <StyleTitle>Ubicación</StyleTitle>
             <p>Huánuco - Perú</p>
-            <p>Jr. Contitución # 461</p>
+            <p>Jr. Constitución # 461</p>
           </StyledContentDescription>
           <StyledContentDescription>
             <StyleTitle>Siguenos</StyleTitle>
