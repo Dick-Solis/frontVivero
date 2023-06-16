@@ -69,7 +69,7 @@ import {AiFillHeart} from "react-icons/ai"
   `;
 //#endregion
 
-export function CardPlant() {
+export function CardPlant(props) {
   const style = {
     fontSize: "25px",
   }
@@ -88,7 +88,7 @@ export function CardPlant() {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <img src={flor} alt="planta" />
+      <img src={props.imageFoto} alt="planta" />
       <Overlay show={showOverlay}>
         <ContentButtons>
           <OverlayButton><FaShoppingCart style={style}/></OverlayButton>

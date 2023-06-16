@@ -51,7 +51,7 @@ export function CardVentaFlor(props){
   const {element} = props;
   return(
     <Card>
-      <StyledImage src={element.foto} alt="flor" />
+      <img src={element.foto} alt="flor" />
       <StyledTitle>{element.nombre_comercial}</StyledTitle>
       <StyledPrice>S/ {element.precio}</StyledPrice>
       <StyledButton>COMPRAR</StyledButton>

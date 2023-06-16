@@ -9,6 +9,26 @@ import { RiLockPasswordFill, RiPlantFill } from "react-icons/ri"
 import { AiFillTag } from "react-icons/ai";
 import { CardPlant } from "../../components/card/cardFlor";
 import { Footer } from "../../components/footer/footer";
+import category1 from "../../assets/arboles forestales/1.jpg"
+import category2 from "../../assets/arboles forestales/2.jpg"
+import category3 from "../../assets/arboles forestales/3.jpg"
+import category4 from "../../assets/arboles forestales/4.jpg"
+import category5 from "../../assets/arboles forestales/5.jpg"
+import category6 from "../../assets/arboles forestales/6.jpg"
+import category7 from "../../assets/arboles forestales/7.jpg"
+import category8 from "../../assets/arboles forestales/8.jpg"
+import category9 from "../../assets/arboles forestales/9.jpg"
+import category10 from "../../assets/arboles forestales/10.jpg"
+import category11 from "../../assets/arboles forestales/11.jpg"
+import category12 from "../../assets/arboles forestales/12.jpg"
+import category13 from "../../assets/arboles forestales/13.jpg"
+import category14 from "../../assets/arboles forestales/1.jpg"
+import fondoInfo from "../../assets/fondoInfo.jpg"
+import principal1 from "../../assets/principal1.png"
+import principal2 from "../../assets/principal2.png"
+import principal3 from "../../assets/principal3.png"
+import principal4 from "../../assets/principal4.png"
+
 
 
 //#region
@@ -98,20 +118,20 @@ const CardsContentFisrt = styled.div`
   `;
 
 const StyledCardUno = styled.article`
-    background-image: url(${arregloRosas});
-    background-repeat: no-repeat;
+    background-image: url(${props => props.imageUrl});
+    /* background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
     justify-content:flex-end;
-    align-items: center;
+    align-items: center; */
     width: 300px;
     min-height: 300px;
   `;
 
 const StyledCardDos = styled.article`
-    background-image: url(${suculentas});
+    background-image: url(${props => props.imageUrl});
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -148,7 +168,7 @@ const StyledCardCuatro = styled.article`
     width: 350px;
     height: 615px;
   `;
-
+StyledFlores
 
 const TitleCard = styled.h2`
     font-size: 60px;
@@ -208,12 +228,18 @@ const ContentCards = styled.div`
 
   const ContentNososotros = styled.section`
     width: 100%;
-    background-color: #bab6b6;
+    background-image: url(${fondoInfo});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: start;
     gap: 20px;
     padding: 25px;
+    color: #ffffff;
+    opacity: 1.5;
+    font-weight: bold;
     @media (max-width: 1024px){
       flex-wrap: wrap;
     }
@@ -232,6 +258,20 @@ const ContentCards = styled.div`
     flex-direction: column;
     text-align: justify;
     gap: 7px;
+  `;
+
+  const StyledImg = styled.img`
+    width: 300px;
+    min-height: 300px;
+  `;
+
+  const CardsCategories = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
   `;
 //#endregion
 
@@ -257,26 +297,60 @@ export function HomePage() {
 
       <StyledFlores>
         <ContentStyledCards>
-          <CardsContentFisrt>
-            <StyledCardUno>
-              <TitleCard>Mejores</TitleCard>
-              <TextCard>Colecciones</TextCard>
-            </StyledCardUno>
-            <StyledCardDos>
-              <TitleCard>Mejores</TitleCard>
-              <TextCard>Colecciones</TextCard>
-            </StyledCardDos>
-          </CardsContentFisrt>
+          
 
           <StyledCardTres>
             <TitleCard>Mejores</TitleCard>
             <TextCard>Colecciones</TextCard>
           </StyledCardTres>
+
+          <CardsContentFisrt>
+            <StyledImg src={category1}/>
+            <StyledImg src={category2}/>
+          </CardsContentFisrt>
+
+          <CardsContentFisrt>
+            <StyledImg src={category3}/>
+            <StyledImg src={category4}/>
+          </CardsContentFisrt>
+
+          <CardsContentFisrt>
+            <StyledImg src={category5}/>
+            <StyledImg src={category6}/>
+          </CardsContentFisrt>
+
           <StyledCardCuatro>
             <TitleCard>Mejores</TitleCard>
             <TextCard>Colecciones</TextCard>
           </StyledCardCuatro>
+          
+            {/* <StyledImg src={category1} alt="" />
+            <StyledImg src={category2} alt="" />
+            <StyledImg src={category3} alt="" />
+            <StyledImg src={category4} alt="" />
+            <StyledImg src={category5} alt="" />
+            <StyledImg src={category6} alt="" />
+            <StyledImg src={category7} alt="" />
+            <StyledImg src={category8} alt="" />
+            <StyledImg src={category9} alt="" />
+            <StyledImg src={category10} alt="" />
+            <StyledImg src={category11} alt="" />
+            <StyledImg src={category12} alt="" />
+            <StyledImg src={category13} alt="" />
+            <StyledImg src={category14} alt="" /> */}
         </ContentStyledCards>
+        <CardsCategories>
+          <StyledImg src={category7} alt="" />
+          <StyledImg src={category8} alt="" />
+          <StyledImg src={category9} alt="" />
+          <StyledImg src={category10} alt="" />
+          <StyledImg src={category11} alt="" />
+        </CardsCategories>
+        <CardsCategories>
+          <StyledImg src={category12} alt="" />
+          <StyledImg src={category13} alt="" />
+          <StyledImg src={category14} alt="" />
+        </CardsCategories>
       </StyledFlores >
 
       <ContentStyledIcons>
@@ -319,10 +393,10 @@ export function HomePage() {
         <TitleContentProducts>Principales Productos</TitleContentProducts>
         <DescriptionContentProducts>Calidad Garantizada</DescriptionContentProducts>
         <ContentCards>
-          <CardPlant />
-          <CardPlant />
-          <CardPlant />
-          <CardPlant />
+          <CardPlant imageFoto={principal1}/>
+          <CardPlant imageFoto={principal2}/>
+          <CardPlant imageFoto={principal3}/>
+          <CardPlant imageFoto={principal4}/>
         </ContentCards>
       </ContentProducts>
 

@@ -7,15 +7,31 @@ import logoCompany from "../../assets/MUNDO-VERDE-01.png"
 
 //#region
   const StyledContent = styled.footer`
+    position: relative;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    flex-direction:column;
+    flex-direction: column;
     background-image: url(${imageFooter});
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     color: white;
+    z-index: -8;
+    &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(${imageFooter});
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(2px); 
+    opacity: 1.5; 
+    z-index: -1;
+  }
   `;
 
   const StyledContentFooter = styled.article`
@@ -25,6 +41,7 @@ import logoCompany from "../../assets/MUNDO-VERDE-01.png"
     padding: 10px;
     gap: 15px;
     width: 100%;
+    z-index:10000;
     @media (max-width:1024px){
       flex-wrap: wrap;
     }
