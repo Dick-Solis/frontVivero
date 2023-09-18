@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { CardServices } from "../../components/card/cardServices";
 import servicio1 from "../../assets/servicio1.webp";
 import { Footer } from "../../components/footer/footer";
+import { SERVICES } from "../../data/services";
 
 //#region
   const ContentPage = styled.main`
@@ -22,26 +23,13 @@ export function ServiciosPage(){
   return(
     <ContentPage>
       <SectionServices>
-        <CardServices
-          image={servicio1}
-          title={"Asesoria para el cuidado de plantas"}
-          description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, odio."}
-        />
-        <CardServices
-          image={servicio1}
-          title={"Asesoria para el cuidado de plantas"}
-          description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, odio."}
-        />
-        <CardServices
-          image={servicio1}
-          title={"Asesoria para el cuidado de plantas"}
-          description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, odio."}
-        />
-        <CardServices
-          image={servicio1}
-          title={"Asesoria para el cuidado de plantas"}
-          description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, odio."}
-        />
+        {SERVICES.map((element)=>(
+          <CardServices
+            image={servicio1}
+            title={element.nameService}
+            // description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, odio."}
+          />
+        ))}
       </SectionServices>
       <Footer/>
     </ContentPage>
