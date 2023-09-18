@@ -1,9 +1,8 @@
 import styled from "@emotion/styled";
-import {RiPlantFill} from "react-icons/ri"
 import {FaFacebook} from "react-icons/fa";
 import {AiFillInstagram,AiOutlineTwitter} from "react-icons/ai";
 import imageFooter from "../../assets/footerbg.jpg"
-import logoCompany from "../../assets/MUNDO-VERDE-01.png"
+import logoCompany from "../../assets/logoCompany.png"
 
 //#region
   const StyledContent = styled.footer`
@@ -46,6 +45,17 @@ import logoCompany from "../../assets/MUNDO-VERDE-01.png"
       flex-wrap: wrap;
     }
   `;
+  const StyledContentContacts = styled.div`
+    display: flex;
+  `;
+  const StyledContentFooterDescription = styled.article`
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    padding: 10px;
+    gap: 15px;
+    width: 100%;
+`;
 
   const StyledContentDescription = styled.div`
     display: flex;
@@ -71,7 +81,7 @@ import logoCompany from "../../assets/MUNDO-VERDE-01.png"
   `;
 
   const StyleTitle = styled.h2`
-    text-align: center;
+    /* text-align: center; */
   `;
 
   const ContentSocial = styled.div`
@@ -94,10 +104,6 @@ import logoCompany from "../../assets/MUNDO-VERDE-01.png"
 //#endregion
 
 export function Footer() {
-  const styleIconsLogos={
-    fontSize: "200px",
-  }
-
   const styleIconsSocial = {
     fontSize: "40px",
   }
@@ -108,36 +114,36 @@ export function Footer() {
         <StyledContentFooter>
           <StyledContentDescription>
             <img src={logoCompany}/>
-            {/* <p>Somos una empresa 100% peruana, con 28 años de experiencia y liderazgo en la propagación de plantas frutales con los más altos estándares de calidad genética.</p> */}
           </StyledContentDescription>
-          <StyledContentDescription>
-            <StyleTitle>Horario de Atención</StyleTitle>
-            <StyledText>LUNES A VIERNES:</StyledText>
-            <StyledText>8:00am a 6:00pm</StyledText>
-            <StyledText>Sábados: 8:00am a 1:00pm</StyledText>
-            <StyledText>Domingos: Cerrado</StyledText>
-            <StyledText>MÁS INFORMACIÓN A:</StyledText>
-            <StyledText>asesoria@planta-de-la-vida.com</StyledText>
-          </StyledContentDescription>
+          
         </StyledContentFooter>
-        <StyledContentFooter>
-          <StyledContentDescription>
-            <StyleTitle>Ubicación</StyleTitle>
-            <p>Huaral- Lima - Perú</p>
-          </StyledContentDescription>
-          <StyledContentDescription>
-            <StyleTitle>Siguenos</StyleTitle>
-            <ContentSocial>
-              <FaFacebook style={styleIconsSocial}/>
-              <AiFillInstagram style={styleIconsSocial}/>
-              <AiOutlineTwitter style={styleIconsSocial}/>
-            </ContentSocial>
-          </StyledContentDescription>
-          <StyledContentDescription>
-            <StyleTitle>Contáctanos</StyleTitle>
-            <p>Tel. 938 364 202</p>
-          </StyledContentDescription>
-        </StyledContentFooter>
+        <StyledContentFooterDescription >
+          <StyledContentContacts>
+            <StyledContentDescription>
+              <StyleTitle>Ubicación</StyleTitle>
+              <p>Huaral- Lima - Perú</p>
+            </StyledContentDescription>
+            <StyledContentDescription>
+              <StyleTitle>Siguenos</StyleTitle>
+              <ContentSocial>
+                <FaFacebook style={styleIconsSocial}/>
+                <AiFillInstagram style={styleIconsSocial}/>
+                <AiOutlineTwitter style={styleIconsSocial}/>
+              </ContentSocial>
+            </StyledContentDescription>
+            <StyledContentDescription>
+              <StyleTitle>Contáctanos</StyleTitle>
+              <p>Tel. 938 364 202</p>
+            </StyledContentDescription>
+          </StyledContentContacts>
+          <div>
+            <StyledContentDescription>
+              <StyleTitle>Horario de Atención</StyleTitle>
+              <StyledText>LUNES A SÁBADO || 8:00am a 6:00pm</StyledText>
+              <StyledText>MÁS INFORMACIÓN A || vivero@rino101.com</StyledText>
+            </StyledContentDescription>
+          </div>
+        </StyledContentFooterDescription>
       </StyledContentAllDescription>
       <SectionFooter>
         <h3>2023 © todos los derechos reservados PLANTSANA</h3>

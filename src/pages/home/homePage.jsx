@@ -9,12 +9,12 @@ import { RiLockPasswordFill, RiPlantFill } from "react-icons/ri"
 import { AiFillTag } from "react-icons/ai";
 import { CardPlant } from "../../components/card/cardFlor";
 import { Footer } from "../../components/footer/footer";
-import category1 from "../../assets/arboles forestales/1.jpg"
-import category2 from "../../assets/arboles forestales/2.jpg"
-import category3 from "../../assets/arboles forestales/3.jpg"
-import category4 from "../../assets/arboles forestales/4.jpg"
-import category5 from "../../assets/arboles forestales/5.jpg"
-import category6 from "../../assets/arboles forestales/6.jpg"
+import category1 from "../../assets/category1.jpg"
+import category2 from "../../assets/category2.jpg"
+import category3 from "../../assets/category3.jpg"
+import category4 from "../../assets/category4.jpg"
+import category5 from "../../assets/category5.jpg"
+import category6 from "../../assets/category6.jpg"
 import category7 from "../../assets/arboles forestales/7.jpg"
 import category8 from "../../assets/arboles forestales/8.jpg"
 import category9 from "../../assets/arboles forestales/9.jpg"
