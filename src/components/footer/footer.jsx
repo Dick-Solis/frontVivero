@@ -123,8 +123,7 @@ export function Footer() {
         <StyledContentFooter>
           <StyledContentDescription>
             <StyleTitle>Ubicación</StyleTitle>
-            <p>Huánuco - Perú</p>
-            <p>Jr. Constitución # 461</p>
+            <p>Huaral- Lima - Perú</p>
           </StyledContentDescription>
           <StyledContentDescription>
             <StyleTitle>Siguenos</StyleTitle>
@@ -133,6 +132,10 @@ export function Footer() {
               <AiFillInstagram style={styleIconsSocial}/>
               <AiOutlineTwitter style={styleIconsSocial}/>
             </ContentSocial>
+          </StyledContentDescription>
+          <StyledContentDescription>
+            <StyleTitle>Contáctanos</StyleTitle>
+            <p>Tel. 938 364 202</p>
           </StyledContentDescription>
         </StyledContentFooter>
       </StyledContentAllDescription>

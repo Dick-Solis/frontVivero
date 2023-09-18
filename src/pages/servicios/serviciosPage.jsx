@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import { CardServices } from "../../components/card/cardServices";
-import servicio1 from "../../assets/servicio1.webp";
 import { Footer } from "../../components/footer/footer";
 import { SERVICES } from "../../data/services";
 
@@ -25,7 +24,8 @@ export function ServiciosPage(){
       <SectionServices>
         {SERVICES.map((element)=>(
           <CardServices
-            image={servicio1}
+            key={element.id}
+            image={element.imageService}
             title={element.nameService}
             // description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, odio."}
           />

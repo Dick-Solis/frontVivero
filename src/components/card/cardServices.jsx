@@ -18,7 +18,7 @@ import styled from "@emotion/styled";
     height: 300px;
   `;
 
-  const StyledTitle = styled.h2`
+  const StyledTitle = styled.h3`
     text-align: center;
   `;
 
