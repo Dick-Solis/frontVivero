@@ -159,6 +159,7 @@ const MobileIcon = styled.div`
 
 export function ComponentNavbar() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  
   return (
     <Container>
       <Wrapper>
