@@ -87,10 +87,10 @@ const ButtonLink = styled.a`
   `;
 
 const StyledFlores = styled.section`
-    background-image: url(${marcoFlores});
+    /* background-image: url(${marcoFlores});
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center; */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -168,7 +168,7 @@ const StyledCardCuatro = styled.article`
     width: 350px;
     height: 615px;
   `;
-StyledFlores
+
 
 const TitleCard = styled.h2`
     font-size: 60px;
