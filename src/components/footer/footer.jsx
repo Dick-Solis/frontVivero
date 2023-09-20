@@ -47,6 +47,7 @@ import logoCompany from "../../assets/logoCompany.png"
   `;
   const StyledContentContacts = styled.div`
     display: flex;
+    flex-wrap: wrap;
   `;
   const StyledContentFooterDescription = styled.article`
     display: flex;

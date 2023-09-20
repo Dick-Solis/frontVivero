@@ -1,8 +1,6 @@
 import styled from "@emotion/styled";
 import cargandoPlanta from "../../assets/p-01.jpg";
 import marcoFlores from "../../assets/marcoFlores.jpg";
-import arregloRosas from "../../assets/arregloRosas.jpg";
-import suculentas from "../../assets/suculentas.jpg";
 import plantaJardin from "../../assets/plantaJardin.jpg";
 import arbol from "../../assets/Arbol.jpg";
 import { RiLockPasswordFill, RiPlantFill } from "react-icons/ri"
@@ -15,25 +13,25 @@ import category3 from "../../assets/category3.jpg"
 import category4 from "../../assets/category4.jpg"
 import category5 from "../../assets/category5.jpg"
 import category6 from "../../assets/category6.jpg"
-import category7 from "../../assets/arboles forestales/7.jpg"
-import category8 from "../../assets/arboles forestales/8.jpg"
-import category9 from "../../assets/arboles forestales/9.jpg"
-import category10 from "../../assets/arboles forestales/10.jpg"
-import category11 from "../../assets/arboles forestales/11.jpg"
-import category12 from "../../assets/arboles forestales/12.jpg"
-import category13 from "../../assets/arboles forestales/13.jpg"
-import category14 from "../../assets/arboles forestales/1.jpg"
+import category7 from "../../assets/category7.jpg"
+import category8 from "../../assets/category8.jpg"
+import category9 from "../../assets/category9.jpg"
+import category10 from "../../assets/category10.jpg"
+import category11 from "../../assets/category11.jpg"
+import category12 from "../../assets/category12.jpg"
+import category13 from "../../assets/category13.jpg"
+import category14 from "../../assets/category14.jpg"
 import fondoInfo from "../../assets/fondoInfo.jpg"
 import principal1 from "../../assets/principal1.png"
 import principal2 from "../../assets/principal2.png"
 import principal3 from "../../assets/principal3.png"
 import principal4 from "../../assets/principal4.png"
-
-
+import video1 from "../../assets/video1.mp4";
+import video2 from "../../assets/video2.mp4";
+import { CardVideo } from "../../components/card/cardVideo";
 
 //#region
 const StyledHeader = styled.header`
-    /* width: 100vw; */
     height: calc(100vh + 80px);
     background-image: url(${cargandoPlanta});
     background-size: cover;
@@ -41,7 +39,6 @@ const StyledHeader = styled.header`
     display: flex;
     justify-content: center;
     align-items: center;
-    /* flex-flow: row nowrap; */
     padding: 20px;
     margin-bottom: 10px;
     font-family: "Caveat";
@@ -108,6 +105,7 @@ const ContentStyledCards = styled.div`
     justify-content: center;
     align-items: start;
     flex-wrap: wrap;
+    padding: 20px;
     gap: 15px;
   `;
 
@@ -115,45 +113,6 @@ const CardsContentFisrt = styled.div`
     display: flex;
     flex-direction: column;
     gap: 15px;
-  `;
-
-const StyledCardUno = styled.article`
-    background-image: url(${props => props.imageUrl});
-    /* background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content:flex-end;
-    align-items: center; */
-    width: 300px;
-    min-height: 300px;
-  `;
-
-const StyledCardDos = styled.article`
-    background-image: url(${props => props.imageUrl});
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content:flex-start;
-    align-items: center;
-    width: 300px;
-    min-height: 300px;
-  `;
-
-const StyledCardTres = styled.article`
-    background-image: url(${plantaJardin});
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content:flex-end;
-    align-items: center;
-    width: 350px;
-    height: 615px;
   `;
 
 const StyledCardCuatro = styled.article`
@@ -297,12 +256,7 @@ export function HomePage() {
 
       <StyledFlores>
         <ContentStyledCards>
-          
-
-          <StyledCardTres>
-            <TitleCard>Mejores</TitleCard>
-            <TextCard>Colecciones</TextCard>
-          </StyledCardTres>
+          <CardVideo video={video1}/>
 
           <CardsContentFisrt>
             <StyledImg src={category1}/>
@@ -319,25 +273,7 @@ export function HomePage() {
             <StyledImg src={category6}/>
           </CardsContentFisrt>
 
-          <StyledCardCuatro>
-            <TitleCard>Mejores</TitleCard>
-            <TextCard>Colecciones</TextCard>
-          </StyledCardCuatro>
-          
-            {/* <StyledImg src={category1} alt="" />
-            <StyledImg src={category2} alt="" />
-            <StyledImg src={category3} alt="" />
-            <StyledImg src={category4} alt="" />
-            <StyledImg src={category5} alt="" />
-            <StyledImg src={category6} alt="" />
-            <StyledImg src={category7} alt="" />
-            <StyledImg src={category8} alt="" />
-            <StyledImg src={category9} alt="" />
-            <StyledImg src={category10} alt="" />
-            <StyledImg src={category11} alt="" />
-            <StyledImg src={category12} alt="" />
-            <StyledImg src={category13} alt="" />
-            <StyledImg src={category14} alt="" /> */}
+          <CardVideo video={video2}/>
         </ContentStyledCards>
         <CardsCategories>
           <StyledImg src={category7} alt="" />
