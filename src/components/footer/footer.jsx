@@ -147,7 +147,7 @@ export function Footer() {
         </StyledContentFooterDescription>
       </StyledContentAllDescription>
       <SectionFooter>
-        <h3>2023 © todos los derechos reservados <strong>RINOSTUDIO</strong></h3>
+        <h3>© 2023 <strong>Grupo Rino</strong>• All Rights Reserved</h3>
       </SectionFooter>
     </StyledContent>
   )
